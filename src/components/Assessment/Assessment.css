@@ -1,0 +1,94 @@
+.assessment__container {
+    width: 60%;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: auto;
+    margin-top: 30px;
+}
+
+.assessment__form {
+    margin: 2rem;
+}
+
+.assessment__form h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    max-width: 800px; 
+    margin: 2rem; 
+    padding: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-column {
+    grid-column: span 2; 
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+
+textarea {
+    width: calc(100% - 20px); 
+    padding: 5px;
+    margin-bottom: 0; 
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 10px; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: -3px;
+
+}
+
+button {
+    width: 100%; 
+    max-width: 200px; 
+    margin: 10px auto; 
+    padding: 15px 25px;
+    background-color: #81bf44;
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #00afda;
+}
+
+
+@media screen and (max-width: 850px) {
+    .assessment__container {
+        width: 90%;
+        margin: 1rem 1rem;
+    }
+
+    .assessment__form {
+        margin: 0;
+    }
+
+    .form-container {
+       display: flex;
+       flex-direction: column;
+        max-width: 800px; 
+        margin: .5rem; 
+        padding: 20px;
+    }
+}

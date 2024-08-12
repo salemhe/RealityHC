@@ -1,0 +1,76 @@
+.contactbody__container {
+    background: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure full height */
+  }
+  
+  .contactbody__content {
+    display: flex;
+    gap: 2rem;
+    max-width: 100%; 
+    margin: 2rem 4rem;
+    padding: 20px;
+  }
+  
+  .contact__T {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .contact__T h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .contact__T p {
+    margin-bottom: 30px;
+  }
+  
+  .contact__form form {
+    max-width: 100%;
+  }
+  
+  .contact__form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .contact__form input,
+  .contact__form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+
+  }
+  
+  
+
+  .map-responsive {
+    overflow: hidden;
+    padding-top: 56.25%; 
+    position: relative;
+  }
+  
+  .map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+
+@media screen  and (max-width: 850px) {
+    .contactbody__content {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    
+}

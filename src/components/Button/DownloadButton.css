@@ -1,0 +1,50 @@
+.downloadbutton__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+    background-color: #222;
+}
+  
+.db__center {
+    text-align: center;
+}
+  
+.db__center h3 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.downloadbutton__container button {
+    transition: all .3s ease-in-out;
+    background: #00afda;
+}
+
+.downloadbutton__container button:hover {
+    background: #81bf44;
+}
+  
+  
+.downloadbutton__container  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+  
+.downloadbutton__container  button i {
+    margin-right: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+  
+  @media (max-width: 850px) {
+    .downloadbutton__container {
+      height: auto; 
+      padding: 20px;
+    }
+
+
+  }
+  

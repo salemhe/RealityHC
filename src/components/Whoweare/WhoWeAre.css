@@ -1,0 +1,46 @@
+.who-we-are__container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+.who-we-are__container h3 {
+    color: #00afda;
+    font-size: 2rem;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.who-we-are__container .second {
+    color: #00afda;
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    margin-bottom: 2%;
+}
+
+.who-we-are__container p {
+    color: #222;
+    font-size: 0.9rem;
+}
+
+.who-we-are__container a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #81bf44;
+    padding: 15px 25px;
+    transition: all .3s ease-in-out;
+    font-weight: 400;
+}
+
+.who-we-are__container a:hover {
+    background-color: #00afda;
+}
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+.ServiceBody__container {
+    padding: 10px;
+    margin: 10px 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.Services__first {
+    justify-content: center;
+    text-align: center;
+}
+
+.Services__first h3 {
+    font-size: 2rem;
+}
+
+.Services__second {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 2rem 4rem;
+    gap: 2rem;
+}
+
+.service__box {
+    border: 1px solid #ccc;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #2f2f2f;
+    cursor: pointer; 
+    position: relative; 
+    transition: transform 0.3s; 
+}
+
+.service__box:hover {
+    transform: scale(1.05); 
+}
+
+.service__image {
+    max-width: 100%;
+}
+
+.green__line {
+    width: 50%; 
+    height: 4px; 
+    background-color: #81bf44; 
+    margin: 0 auto; 
+    margin-bottom: 8px; 
+    border-radius: 8px;
+}
+
+.service__title {
+    margin: 8px 0;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.service__description {
+    font-size: 14px;
+    color: #fff;
+    padding: 16px;
+    margin: 10px;
+}
+
+.dropdown-content {
+    margin-top: 10px;
+    text-align: left; 
+    padding: 10px;
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    color: #000; 
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease, opacity 0.5s ease; 
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Scrollable dropdown */
+.dropdown-content.open {
+    opacity: 1; 
+    max-height: 200px; 
+}
+
+/* Set scrollbar styles for WebKit browsers (Chrome, Safari) */
+.dropdown-content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: #81bf44; /* Color of the scrollbar */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Background of the scrollbar track */
+}
+
+@media screen and (max-width: 850px) { 
+    .Services__first h3 {
+        font-size: 1.5rem;
+    }
+
+    .Services__second {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: auto;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 1.5rem;
+    }
+}

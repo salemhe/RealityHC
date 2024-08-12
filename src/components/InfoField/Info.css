@@ -1,0 +1,41 @@
+.info__container {
+    background-color: #222;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.info__container p {
+    color: #fff;
+}
+
+.info__icons__box {
+    display: flex;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+
+.info__text h5{
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.iconess i  {
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(255, 255, 255, .25);
+    padding: 7px 7px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 850px) {
+    .info__container {
+        padding: 2rem;
+    }
+}

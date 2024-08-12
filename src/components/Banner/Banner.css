@@ -1,0 +1,42 @@
+.banner__container {
+    background: 
+        linear-gradient(rgba(44, 43, 43, 0.9), rgba(55, 55, 55, 0.9)), /* Black overlay */
+        url("/src/media/Second-cover.jpg") center/cover; /* Background image */
+    width: 100%;
+    height: 60vh;
+    display: flex; /* Assuming you want to use flexbox properties */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.banner__text {
+    margin: auto;
+    padding: 100px;
+}
+
+.banner__text h4 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.banner__text p {
+    color:#fff
+}
+
+
+@media screen and (max-width: 850px) {
+
+    .banner__container {
+        height: 50vh;
+    }
+    
+    .banner__text {
+        width: 100%;
+        padding: 2px;
+
+    }
+}

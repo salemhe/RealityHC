@@ -1,0 +1,154 @@
+.AboutBody__container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.First__section {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.First__section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Second__section {
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    width: 100%;
+    max-width: 95%;
+    margin-top: 3rem;
+}
+
+.aboutbody {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.aboutbody img {
+    width: 500px;
+    height: 350px;
+}
+
+.aboutbody__text {
+    text-align: left;
+    padding-top: 40px;
+}
+.aboutbody__text h3 {
+    color: #09b0d9;
+}
+
+.aboutbody__text p {
+    color: #222;
+    margin-bottom: 3px;
+    
+}
+
+.aboutbody__text span {
+    color: #09b0d9;
+    font-weight: 700;
+}
+
+.aboutbody__text i {
+    color: #09b0d9;
+    font-weight: 700;
+}
+
+
+.Third__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; 
+    background: #222;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+
+.TS__center {
+    text-align: center;
+}
+
+.TS__center h3 {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.TS__center a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    .AboutBody__container {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .First__section {
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        text-align: left;
+    }
+
+    .Second__section{
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .aboutbody {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .aboutbody img {
+        /* margin: 0;
+        width: auto; */
+        display: none;
+    }
+
+    
+
+    .aboutbody__text {
+        text-align: left;
+        padding-top: 10px;
+    }
+
+    .Third__section {
+        height: 50vh;
+    }
+
+    .TS__center {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+
+
+    
+    
+}
