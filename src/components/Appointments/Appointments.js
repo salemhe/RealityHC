@@ -7,7 +7,7 @@ const Appointments = () => {
         fullName: '',
         address: '',
         state: '',
-        city: '',
+        city: '', 
         zipcode: '',
         contactMethod: '',
         emailAddress: '',
@@ -21,7 +21,46 @@ const Appointments = () => {
         comments: ''
     });
 
+    const [formErrors, setFormErrors] = useState({});
     const [showPopup, setShowPopup] = useState(false);
+    const [statusMessage, setStatusMessage] = useState('');
+
+    const validateForm = () => {
+        let errors = {};
+        let isValid = true;
+
+        //Validate Full Name
+        if (!formData.fullName) {
+            setFormErrors.fullName = 'full Name is required';
+            isValid = false;
+        }
+
+        //Validate Email Address 
+        if (!formData.emailAddress) {
+            setFormErrors.emailAddress = 'Email Address is required';
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(formData.emailAddress)) {
+            errors.emailAddress = 'Email Address is invalid';
+            isValid = false;
+        }
+
+        //Validate Phone Number (If Provided)
+        if (formData.phoneNumber && !/^\d{10}$/.test(formData.phoneNumber)) {
+            errors.phoneNumber = 'Phone Number must be 10 digits';
+            isValid = false;
+        }
+
+        //Validate Zip Code
+        if(!formData.zipcode) {
+            errors.zipcode = 'Zip Code is required';
+            isValid = false;
+        } else if (!/^\d{5}$/.test(formData.zipcode)) {
+            errors.zipcode = 'Zip Code Must be 5 digits';
+        }
+
+        setFormErrors(errors);
+        return isValid;
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -31,31 +70,68 @@ const Appointments = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log(formData);
+
+        if (!validateForm()) {
+            return;
+        }
+        
+        try {
+            const response = await fetch('https://formspree.io/f/xzzpobbd', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.fullName,
+                    address: formData.address,
+                    state: formData.state,
+                    city: formData.city,
+                    zipcode: formData.zipcode,
+                    contactMethod: formData.contactMethod,
+                    email: formData.emailAddress,
+                    phone: formData.phoneNumber,
+                    fax: formData.fax,
+                    bestTimeToCall: formData.bestTimeToCall,
+                    preferredDate: formData.preferredDate,
+                    preferredTime: formData.preferredTime,
+                    paymentType: formData.desiredPaymentType,
+                    condition: formData.patientCondition,
+                    comments: formData.comments
+                })
+            });
+
+            if (response.ok) {
+                setStatusMessage('Thank you! Your appointment request has been submitted.');
+                // Reset form fields after successful submission
+                setFormData({
+                    fullName: '',
+                    address: '',
+                    state: '',
+                    city: '',
+                    zipcode: '',
+                    contactMethod: '',
+                    emailAddress: '',
+                    phoneNumber: '',
+                    fax: '',
+                    bestTimeToCall: '',
+                    preferredDate: '',
+                    preferredTime: '',
+                    desiredPaymentType: '',
+                    patientCondition: '',
+                    comments: ''
+                });
+            } else {
+                throw new Error('Form submission failed.');
+            }
+        } catch (error) {
+            setStatusMessage('There was a problem with your submission. Please try again.');
+        }
+
         setShowPopup(true);
         setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
-
-        // Reset form fields after submission
-        setFormData({
-            fullName: '',
-            address: '',
-            state: '',
-            city: '',
-            zipcode: '',
-            contactMethod: '',
-            emailAddress: '',
-            phoneNumber: '',
-            fax: '',
-            bestTimeToCall: '',
-            preferredDate: '',
-            preferredTime: '',
-            desiredPaymentType: '',
-            patientCondition: '',
-            comments: ''
-        });
     };
 
     return (
@@ -68,6 +144,7 @@ const Appointments = () => {
                     <div className="form-group">
                         <label htmlFor='fullName'><FaUser /> Full Name</label>
                         <input type='text' id='fullName' name='fullName' value={formData.fullName} onChange={handleChange} required />
+                        {formErrors.fullName && <span className='error'>{formErrors.fullName}</span>}
                     </div>
 
                     <div className="form-group">
@@ -140,6 +217,7 @@ const Appointments = () => {
                     <div className="form-group">
                         <label htmlFor='zipcode'><FaMapMarkedAlt /> Zip Code</label>
                         <input type='text' id='zipcode' name='zipcode' value={formData.zipcode} onChange={handleChange} required />
+                        {formErrors.zipcode && <span className='error'>{formErrors.zipcode}</span>}
                     </div>
 
                     <div className="form-group">
@@ -155,11 +233,13 @@ const Appointments = () => {
                     <div className="form-group">
                         <label htmlFor='emailAddress'><FaEnvelope /> Email Address</label>
                         <input type='email' id='emailAddress' name='emailAddress' value={formData.emailAddress} onChange={handleChange} required />
+                        {formErrors.emailAddress && <span className='error'>{formErrors.emailAddress}</span>}
                     </div>
 
                     <div className="form-group">
                         <label htmlFor='phoneNumber'><FaPhone /> Phone Number</label>
                         <input type='tel' id='phoneNumber' name='phoneNumber' value={formData.phoneNumber} onChange={handleChange} />
+                        {formErrors.phoneNumber && <span className="error">{formErrors.phoneNumber}</span>}
                     </div>
 
                     <div className="form-group">
@@ -219,6 +299,7 @@ const Appointments = () => {
                     </div>
 
                     <button type="submit" className="submit-button">Submit</button>
+                    {formErrors.submit && <span className="error">{formErrors.submit}</span>}
                 </form>
             </div>
 
@@ -235,5 +316,7 @@ const Appointments = () => {
 };
 
 export default Appointments;
+
+
 
 

@@ -98,3 +98,10 @@ textarea {
     font-size: 18px;
     color: #333;
 }
+
+.error {
+    font-style: italic;
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+}
