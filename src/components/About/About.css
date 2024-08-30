@@ -81,13 +81,13 @@
 }
 
 
-@media  screen and (max-width: 850px) {
+@media  screen and (max-width: 850px) and (min-width: 360px) {
     .about__container {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin: 0;
-        margin-bottom: 130%;
+        margin-bottom: 146%;
     }
 
     .image__section {
@@ -109,13 +109,5 @@
 
     
 }
-
-
-
-
-
-
-
-
 
 
