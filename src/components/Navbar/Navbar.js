@@ -12,7 +12,10 @@ const Navbar = () => {
     return (
         <nav className='nav__items'>
             <h1 className='nav__logo'>
-            <i className="fas fa-hand-holding-heart"></i>RealityCare 
+                <a href='/'>
+                    <i className="fas fa-hand-holding-heart"></i>RealityHC 
+                </a>
+            
             </h1>
 
             <div className='menu__icons' onClick={handleClick}>

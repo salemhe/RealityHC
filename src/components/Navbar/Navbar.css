@@ -31,6 +31,13 @@
     padding: 7px 7px;
 }
 
+.nav__logo a {
+    color: #222;
+    text-decoration: none;
+    font-size: 2rem;
+    
+}
+
 .nav__menu {
     display: grid;
     grid-template-columns: repeat(6, auto);

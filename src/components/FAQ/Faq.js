@@ -6,7 +6,7 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What types of elder care services does your company offer?",
+      question: "What types of Reality Health care services does your company offer?",
       answer: "Our company provides a range of elder care services including in-home care, skilled nursing care, physical and occupational therapy, medication management, and companionship. We also offer specialized care for conditions such as Alzheimer's and dementia, and support for activities of daily living."
     },
     {

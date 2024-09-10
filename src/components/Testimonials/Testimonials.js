@@ -3,9 +3,9 @@ import './Testimonials.css'; // Import your CSS file
 
 const Testimonials = () => {
   const testimonials = [
-    { id: 1, name: 'John Doe', rating: 5, comment: ' "Eldarce Company has been instrumental in transforming our business operations." ' },
-    { id: 2, name: 'Jane Smith', rating: 4, comment: ' "We have been working with Eldarce Company for over two years now, and their commitment to quality and customer satisfaction is unmatched." ' },
-    { id: 3, name: 'Michael Johnson', rating: 3, comment: ' "Choosing Eldarce Company was one of the best decisions we made for our business. Their expertise has helped us streamline our operations." ' },
+    { id: 1, name: 'John Doe', rating: 5, comment: ' "Reality Health care has been instrumental in transforming our business operations." ' },
+    { id: 2, name: 'Jane Smith', rating: 4, comment: ' "We have been working with Reality Health Company for over two years now, and their commitment to quality and customer satisfaction is unmatched." ' },
+    { id: 3, name: 'Michael Johnson', rating: 3, comment: ' "Choosing Reality Health Company was one of the best decisions we made for our business. Their expertise has helped us streamline our operations." ' },
   ];
 
   return (
