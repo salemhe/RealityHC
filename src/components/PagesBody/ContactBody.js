@@ -99,7 +99,7 @@ const ContactBody = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226566.52381791736!2d-97.16880767447282!3d33.031788181312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c6fa1b4d5e90f%3A0x7e4b7e4b4a5aebf7!2sFlower%20Mound%2C%20TX%2C%20USA!5e0!3m2!1sen!2sus!4v1632909277226!5m2!1sen!2sus"
               width="600"
               height="450"
-              style={{ border: 0 }}
+              style={{ border: 0 }}  
               allowFullScreen
               loading="lazy"
             ></iframe>
