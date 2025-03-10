@@ -9,7 +9,6 @@ const HowItWorks = () => {
             <p>What Can We Help You With Today?</p>
         </div>
       
-
       <div className='main__box'>
         <div className='how-it-works__box'>
             <i className="fas fa-sticky-note"></i>

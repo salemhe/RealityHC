@@ -27,7 +27,7 @@ const Home = () => {
       <About />
       <Services />
       <Banner />
-      <Choose /> <br />
+      <Choose /> 
       <Info />
       <Testimonials />
       <DownloadButton />

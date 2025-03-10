@@ -54,8 +54,7 @@
 @media screen and (max-width: 850px) {
 
     .how-it-works__container {
-        height: 100vh;
-        
+        height: 100vh;  
     }
     .main__box {
         display: flex;
@@ -69,3 +68,5 @@
         max-width: fit-content;
     }
 }
+
+

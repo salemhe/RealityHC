@@ -4,7 +4,7 @@
     /* margin: 1rem; */
     margin: 1.5rem 2.5rem;
     padding: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
 }
 
 .textes__section {
@@ -95,19 +95,19 @@
     background-color: #00afda;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) and (min-width: 360px) {
     .why-choose-us__container {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin: 0;
-        margin-bottom: 38rem;
+        margin-bottom: 40rem;
        
     }
 
     .images__section img {
-        /* object-fit: contain; */
-        max-width: fit-content;
+        object-fit: cover; 
+        max-width: 100%;
         width: 200%;
         height: 400px;
         padding: 0;
@@ -139,7 +139,10 @@
         width: 260px;
     }
 
+}
 
-
-
+@media screen and (max-width: 430px) and (min-width: 390px) {
+    .why-choose-us__container {
+        margin-bottom: 25rem; 
+    }
 }
